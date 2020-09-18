@@ -1,7 +1,15 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+//*Green Color #28df99
+//Purple color #59405c
+// #726a95
+//#709fb0
+
+//#444
+// #eece1a
+
+$primary-color: #59405c;
+$secondary-color: #28df99;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/background2.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -27,5 +35,29 @@ $background-opacity: 0.9;
       }
     }
 
+  }
+}
+//! Media Query Mixin
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width:769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
