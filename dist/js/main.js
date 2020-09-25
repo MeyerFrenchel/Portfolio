@@ -5,6 +5,7 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const profilePicture = document.querySelector('.bio-image');
 
 
 //Set Initial state of menu 
@@ -22,6 +23,7 @@ function toggleMenu() {
 
     //Set Menu State
     showMenu = true;
+    profilePicture.style.display = "none";
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
@@ -31,5 +33,6 @@ function toggleMenu() {
 
     //Set Menu State
     showMenu = false;
+    profilePicture.style.display = "block";
   }
 }

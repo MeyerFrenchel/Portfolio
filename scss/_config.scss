@@ -11,6 +11,7 @@ $secondary-color: #28df99;
 $show-home-image: true;
 $home-image: url(../img/background2.jpg);
 $background-opacity: 0.9;
+$home-image-small: url(../img/background3.jpg);
 
 @mixin easeOut {
   transition: all 0.8s ease-out;
@@ -34,6 +35,28 @@ $background-opacity: 0.9;
         background: rgba($primary-color, $background-opacity);
       }
     }
+
+  }
+  }
+
+  @mixin background-small {
+    @if $show-home-image {
+      &#bg-img {
+        background: $home-image-small;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: rgba($primary-color, $background-opacity);
+        }
+      }
 
   }
 }
