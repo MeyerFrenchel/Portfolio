@@ -227,6 +227,39 @@ p {
   color: set-text-color(#59405c);
   height: 60px; }
 
+.cardd {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  margin-bottom: 5%;
+  position: relative;
+  height: 10rem; }
+  .cardd__side {
+    color: white;
+    font-size: 2rem;
+    height: 10rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); }
+    .cardd__side--front {
+      background-color: #3c2b3e; }
+    .cardd__side--back {
+      background-image: linear-gradient(to right bottom, #28df99, #5addab);
+      transform: rotateY(-180deg); }
+  .cardd:hover .cardd__side--front {
+    transform: rotateY(180deg); }
+  .cardd:hover .cardd__side--back {
+    transform: rotateY(0); }
+  .cardd__picture {
+    background-size: cover;
+    height: 2rem; }
+    .cardd__picture--1 {
+      background-image: url(../dist/img/piggy.jpg); }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
