@@ -9,7 +9,8 @@
   @include easeOut;
 
   .btn-line {
-    width: 28px;
+    position: relative;
+    width: 32px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
@@ -39,6 +40,25 @@
     }
 
   }
+
+  &:hover {
+    .btn-line {
+      &:nth-child(1) {
+        top: -2px;
+        background-color: $secondary-color;
+      }
+
+      &:nth-child(2) {
+
+        background-color: $tertiary-color;
+      }
+
+      &:nth-child(3) {
+        top: 2px;
+        background-color: $secondary-color;
+      }
+    }
+     }
 }
 //Menu Overlay
 
@@ -128,7 +148,7 @@
     @include easeOut;
 
     &:hover {
-      color: $secondary-color;
+      color: $tertiary-color;
     }
   }
 }

@@ -8,11 +8,15 @@
 
 $primary-color: #59405c;
 $secondary-color: #28df99;
+$secondary-color-dark: #1a855c;
 $secondary-color-light:#5addab;
+$tertiary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background2.jpg);
+$project-image: url(../img/proj.jpg);
 $background-opacity: 0.9;
 $home-image-small: url(../img/background3.jpg);
+$picture-1: url(../img/piggy.jpg);
 
 @mixin easeOut {
   transition: all 0.8s ease-out;
@@ -40,6 +44,28 @@ $home-image-small: url(../img/background3.jpg);
   }
   }
 
+  @mixin background-projects {
+    @if $show-home-image {
+      &#work {
+        background: $project-image;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 140%;
+          z-index: -1;
+          background: rgba($primary-color, $background-opacity);
+        }
+      }
+
+    }
+  }
+
   @mixin background-small {
     @if $show-home-image {
       &#bg-img {
@@ -60,10 +86,32 @@ $home-image-small: url(../img/background3.jpg);
       }
 
   }
+  }
+
+  @mixin background-projects-small {
+    @if $show-home-image {
+      &#work {
+        background: $project-image;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 451%;
+          z-index: -1;
+          background: rgba($primary-color, $background-opacity);
+        }
+      }
+
+}
 }
 //! Media Query Mixin
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 500px) and (max-height: 820px) {
     @content;
   }
 }
