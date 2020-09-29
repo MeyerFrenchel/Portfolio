@@ -2,7 +2,7 @@
   "name": "portofolio",
   "version": "1.0.0",
   "description": "responsive portfolio website",
-  "main": "main.js",
+  "main": "index.js",
   
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
