@@ -16,6 +16,9 @@ cursor: pointer;
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
+    
+    visibility:visible;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1rem 3rem rgba(#000, .15);
