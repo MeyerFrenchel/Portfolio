@@ -161,10 +161,6 @@
           text-transform: uppercase; }
           .cardd__side--back .small-ul .small-li:not(:last-child) {
             border-bottom: 1px solid #eee; }
-  .cardd:active .cardd__side--front {
-    transform: rotateY(180deg); }
-  .cardd:active .cardd__side--back {
-    transform: rotateY(0); }
   .cardd__picture {
     background-position: 70% 40%;
     background-size: cover;
@@ -192,6 +188,23 @@
   .cardd__heading-span {
     background-image: linear-gradient(to right bottom, #1a855c, #5addab); }
 
+.inffo {
+  position: relative;
+  display: block;
+  text-align: center; }
+
+.inffo:hover {
+  position: relative;
+  transform: scale(1.1);
+  bottom: 2px;
+  color: #f5e279; }
+
+.inffo:active {
+  position: relative;
+  top: 1px;
+  color: #eece1a;
+  box-shadow: 5px 73px 95px -24px white; }
+
 * {
   box-sizing: border-box; }
 
@@ -200,7 +213,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background2.jpg);
@@ -352,7 +365,14 @@ p {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .cardd__heading {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+  .cardd__side--back ul li {
+    font-size: 1.3rem; }
+  .cardd__side--back .back-text-lg {
+    font-size: 1.4rem; }
+  .cardd__side--back .back-text-sm {
+    font-size: 1.1rem;
+    padding: 5%; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -381,7 +401,16 @@ p {
       width: 150px;
       height: 150px; }
   .cardd__heading {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+  .cardd__side--back {
+    line-height: 1.3; }
+  .cardd__side--back ul li {
+    font-size: 1.1rem; }
+  .cardd__side--back .back-text-lg {
+    font-size: 1.1rem; }
+  .cardd__side--back .back-text-sm {
+    font-size: 1rem;
+    padding: 3%; } }
 
 @media screen and (max-width: 500px) and (max-height: 820px) {
   #bg-img#bg-img {
