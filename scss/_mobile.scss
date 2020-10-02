@@ -6,6 +6,17 @@
   .cardd__heading {
     font-size: 3rem;
   }
+  
+  .cardd__side--back ul li {
+    font-size: 1.3rem;
+  }
+  .cardd__side--back .back-text-lg {
+    font-size: 1.4rem;
+ }
+ .cardd__side--back .back-text-sm {
+   font-size: 1.1rem;
+   padding: 5%;
+ }
 }
 
 //Tablets & small laptops
@@ -50,6 +61,19 @@
   .cardd__heading {
     font-size: 3rem;
   }
+  .cardd__side--back {
+    line-height: 1.3;
+  }
+  .cardd__side--back ul li {
+    font-size: 1.1rem;
+  }
+  .cardd__side--back .back-text-lg {
+    font-size: 1.1rem;
+ }
+ .cardd__side--back .back-text-sm {
+   font-size: 1rem;
+   padding: 3%;
+ }
 }
 
 //Smartphones
@@ -95,5 +119,6 @@ main#about h1 {
   top: 4rem;
   width: 100%;
 }
+
 
 }
